@@ -37,6 +37,6 @@ workflows:
     jobs:
       - udagram
       - aws-elastic-beanstalk/deploy:
-          app-dir: udagram-api/build 
+          app-dir: udagram-api/www 
           application-name: Udagram 
           environment-name: development

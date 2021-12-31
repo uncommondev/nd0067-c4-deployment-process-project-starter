@@ -20,6 +20,9 @@ jobs:
       - aws-cli/install
       - aws-cli/setup
       - node/install
+      - run: 
+          name: "Run LS"
+          command: ls -al
       - run:
           name: "Install node modules (API)"
           command: |

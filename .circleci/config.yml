@@ -35,6 +35,10 @@ jobs:
           command: |
             npm run backend:deploy
       - run:
+          name: "Check Chrome"
+          command: |
+            which google-chrome
+      - run:
           name: "Install node modules (Frontend)"
           command: |
             cd udagram-frontend && npm install --legacy-peer-deps

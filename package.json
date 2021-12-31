@@ -7,7 +7,7 @@
         "frontend:deploy": "cd deploy && chmod +x frontend.sh && ./frontend.sh",
         "backend:test": "cd udagram-api && npm run test",
         "backend:build": "cd udagram-api && npm run build",
-        "backend:deploy": ""
+        "backend:deploy": "cd deploy && chmod +x backend.sh && ./backend.sh"
     },
     "devDependencies": {}
 }

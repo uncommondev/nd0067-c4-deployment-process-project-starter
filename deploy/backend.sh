@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "Backend Deployment Activated"
-cd ../udagram-api/build
-eb deploy
+cd ../udagram-api
+eb deploy Archive.zip

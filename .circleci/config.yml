@@ -37,7 +37,7 @@ jobs:
       - run:
           name: "Install node modules (Frontend)"
           command: |
-            cd udagram-frontend && npm i
+            cd udagram-frontend && npm install --legacy-peer-deps
       - run:
           name: "Test Frontend"
           command: |

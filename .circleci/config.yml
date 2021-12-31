@@ -4,11 +4,11 @@ version: 2.1
 
 orbs:
   aws-cli: circleci/aws-cli@2.0.3
-
+  node: circleci/node@5.0.0
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
-  say-hello:
+  udagram:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     docker:
@@ -17,14 +17,20 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
       - aws-cli/install
       - aws-cli/setup
+      - node/install
+      - run:
+          name: "Install node modules (API)"
+          command: |
+            cd udagram-api && npm i
+      - run:
+          name: "Build API"
+          command: |
+            npm run backend:build
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  say-hello-workflow:
+  udagram-workflow:
     jobs:
-      - say-hello
+      - udagram

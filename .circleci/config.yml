@@ -34,6 +34,26 @@ jobs:
           name: "Deploy API"
           command: |
             npm run backend:deploy
+      - run:
+          name: "Install node modules (Frontend)"
+          command: |
+            cd udagram-frontend && npm i
+      - run:
+          name: "Test Frontend"
+          command: |
+            npm run frontend:test
+      - run:
+          name: "Build Frontend"
+          command: |
+            npm run frontend:build
+      - run: 
+          name: "Deploy Frontend"
+          command: |
+            npm run frontend:deploy
+      - run:
+          name: "E2E Test"
+          command: |
+            echo "Run E2E Test"
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:

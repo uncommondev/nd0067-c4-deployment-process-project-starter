@@ -20,9 +20,6 @@ jobs:
       - aws-cli/install
       - aws-cli/setup
       - node/install
-      - run: 
-          name: "Run LS"
-          command: ls -al
       - run:
           name: "Install node modules (API)"
           command: |
@@ -31,6 +28,10 @@ jobs:
           name: "Build API"
           command: |
             npm run backend:build
+      - run:
+          name: "Deploy API (Development)"
+          command: |
+            npm run backend:deploy
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:

@@ -24,22 +24,18 @@ jobs:
       - eb/setup
       - node/install
       - browser-tools/install-chrome
-      - run:
-          name: "Install node modules (API)"
-          command: |
-            cd udagram-api && npm i
-      - run:
-          name: "Build API"
-          command: |
-            npm run backend:build
-      - run:
-          name: "Deploy API"
-          command: |
-            npm run backend:deploy
-      - run:
-          name: "Check Chrome"
-          command: |
-            which google-chrome
+      # - run:
+      #     name: "Install node modules (API)"
+      #     command: |
+      #       cd udagram-api && npm i
+      # - run:
+      #     name: "Build API"
+      #     command: |
+      #       npm run backend:build
+      # - run:
+      #     name: "Deploy API"
+      #     command: |
+      #       npm run backend:deploy
       - run:
           name: "Install node modules (Frontend)"
           command: |

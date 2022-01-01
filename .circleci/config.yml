@@ -43,7 +43,7 @@ jobs:
       - run:
           name: "Install node modules (Frontend)"
           command: |
-            cd udagram-frontend && npm install
+            cd udagram-frontend && npm install --force
       # - run:
       #     name: "Test Frontend"
       #     command: |

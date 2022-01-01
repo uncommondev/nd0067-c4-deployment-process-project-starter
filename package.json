@@ -6,7 +6,8 @@
         "frontend:deploy": "cd deploy && chmod +x frontend.sh && ./frontend.sh",
         "backend:test": "cd udagram-api && npm run test",
         "backend:build": "cd udagram-api && npm run build",
-        "backend:deploy": "cd deploy && chmod +x backend.sh && ./backend.sh"
+        "backend:deploy": "cd deploy && chmod +x backend.sh && ./backend.sh",
+        "frontend:e2e": "cd udagram-frontend && npm run e2e"
     },
     "devDependencies": {
         "angular": "^1.8.2"

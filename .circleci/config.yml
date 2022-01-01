@@ -59,7 +59,7 @@ jobs:
       - run:
           name: "E2E Test"
           command: |
-            echo "Run E2E Test"
+            npm run frontend:e2e
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:

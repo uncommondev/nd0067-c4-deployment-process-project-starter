@@ -24,18 +24,18 @@ jobs:
       - eb/setup
       - node/install
       - browser-tools/install-chrome
-      # - run:
-      #     name: "Install node modules (API)"
-      #     command: |
-      #       cd udagram-api && npm i
-      # - run:
-      #     name: "Build API"
-      #     command: |
-      #       npm run backend:build
-      # - run:
-      #     name: "Deploy API"
-      #     command: |
-      #       npm run backend:deploy
+      - run:
+          name: "Install node modules (API)"
+          command: |
+            cd udagram-api && npm i
+      - run:
+          name: "Build API"
+          command: |
+            npm run backend:build
+      - run:
+          name: "Deploy API"
+          command: |
+            npm run backend:deploy
       - run:
           name: "Install node modules (Frontend)"
           command: |
@@ -52,10 +52,10 @@ jobs:
           name: "Deploy Frontend"
           command: |
             npm run frontend:deploy
-      - run:
-          name: "E2E Test"
-          command: |
-            npm run frontend:e2e
+      # - run:
+      #     name: "E2E Test"
+      #     command: |
+      #       npm run frontend:e2e
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:

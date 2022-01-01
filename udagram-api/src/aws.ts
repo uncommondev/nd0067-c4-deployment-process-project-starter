@@ -2,7 +2,10 @@ import AWS = require("aws-sdk");
 import { config } from "./config/config";
 
 // Configure AWS
-const credentials = new AWS.SharedIniFileCredentials({ profile: "default" });
+const credentials = new AWS.Credentials({
+  accessKeyId: process.env.AWS_ACCESS_KEY,
+  secretAccessKey: process.env.AWS_SECRET,
+});
 AWS.config.credentials = credentials;
 
 export const s3 = new AWS.S3({

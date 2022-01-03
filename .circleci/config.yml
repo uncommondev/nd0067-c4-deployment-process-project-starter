@@ -65,4 +65,8 @@ jobs:
 workflows:
   udagram-workflow:
     jobs:
-      - udagram
+      - udagram:
+          filters:
+            branches:
+              only:
+                - main

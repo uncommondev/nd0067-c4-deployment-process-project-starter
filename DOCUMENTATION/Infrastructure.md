@@ -100,7 +100,7 @@ The last important step is to add the CORS policy under `Permissions` > `Cross-o
     deploy:
       artifact:  www/Archive.zip
 5. Next up, we need to create an environment for us to work with, use the command `eb create *env_name*` 
-6. Everything is nearly setup but the last bit is configuring the environment variables in Elastic Beanstalk. Go to `Elastic Beanstalk` in the console > Select the environment > Go to `Configuration` > In the `Software` catagory, select `Edit` > Enter you environment variables in `Environment Properties`:
+6. The environment variables will be setup and configure in the pipeline. The values are pulled from the environment variables configured in Circle CI. There is a step in the pipeline that was create and set the values. To see them or check they are configured correctly, go to `Elastic Beanstalk` in the console > Select the environment > Go to `Configuration` > In the `Software` category, select `Edit` > See your environment variables in `Environment Properties`:
 
 ![EB Environment Variables](/SCREENSHOTS/EB_ENV.png)
 

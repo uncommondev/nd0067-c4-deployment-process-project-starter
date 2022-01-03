@@ -29,7 +29,18 @@ The pipeline consists of several steps which ultimately lead to the application 
 
 ## Configuration
 
-The pipeline by default will trigger with each commit. 
+The pipeline by default will trigger with each commit on the `main` branch. 
+
+If you need to alter it or add additional branches, you can add them in the `workflows` configuration in `config.yml`
+
+    workflows:
+      udagram-workflow:
+        jobs:
+          - udagram:
+              filters:
+                branches:
+                  only:
+                    - main
 
 The pipeline file itself can be edited in either the browser or VS Code. The file is in `.circleci` and the file is `config.yml`
 

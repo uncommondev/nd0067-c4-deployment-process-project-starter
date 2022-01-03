@@ -21,6 +21,8 @@ The overview of how it works is the following:
 
 There is a CI/CD pipeline in place hosted on Circle CI. Full instructions on the pipeline steps can be found in the `DOCUMENTATION` folder.
 
+NOTE: The pipeline will only run on the `main` branch.
+
 ![Pipeline](/DIAGRAMS/PIPELINE.png)
 
 ## Infrastructure Setup
